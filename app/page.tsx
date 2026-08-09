@@ -1,69 +1,286 @@
-import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <main className="min-h-screen bg-white text-black transition-colors duration-300 dark:bg-black dark:text-white">
+      {/* Navigation */}
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8">
+        <h1 className="text-xl font-semibold">Portfolio</h1>
+
+        <div className="flex items-center gap-6">
+          <div className="hidden gap-6 text-sm text-gray-600 md:flex dark:text-gray-400">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#about"
+              className="transition hover:text-black dark:hover:text-white"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              About
+            </a>
+
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#experience"
+              className="transition hover:text-black dark:hover:text-white"
             >
-              Learning
-            </a>{" "}
-            center.
+              Experience
+            </a>
+
+            <a
+              href="#skills"
+              className="transition hover:text-black dark:hover:text-white"
+            >
+              Skills
+            </a>
+
+            <a
+              href="#projects"
+              className="transition hover:text-black dark:hover:text-white"
+            >
+              Projects
+            </a>
+          </div>
+
+          <ThemeToggle />
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="mx-auto flex min-h-[75vh] max-w-6xl flex-col justify-center px-6">
+        <p className="mb-4 text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400">
+          Computer Science Student
+        </p>
+
+        <h2 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
+          Building strong foundations in software, systems, and problem solving.
+        </h2>
+
+        <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-400">
+          Developing my technical skills through computer science coursework,
+          hands-on projects, professional experience, and modern AI-assisted
+          workflows.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-4">
+          <a
+            href="#projects"
+            className="rounded-lg bg-black px-6 py-3 font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+          >
+            View Projects
+          </a>
+
+          <a
+            href="#experience"
+            className="rounded-lg border border-gray-300 px-6 py-3 font-medium transition hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-900"
+          >
+            Experience
+          </a>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="mx-auto max-w-6xl px-6 py-24">
+        <p className="mb-3 text-sm uppercase tracking-widest text-gray-500">
+          About
+        </p>
+
+        <h2 className="text-3xl font-semibold">What I&apos;m Learning</h2>
+
+        <p className="mt-6 max-w-3xl leading-8 text-gray-600 dark:text-gray-400">
+          My computer science coursework has developed my understanding of
+          Data Structures & Algorithms, Computer Architecture, Software
+          Engineering, Systems Programming, Discrete Structures, Logic,
+          Statistics, and Object-Oriented Programming.
+        </p>
+      </section>
+
+      {/* Experience */}
+      <section id="experience" className="mx-auto max-w-6xl px-6 py-24">
+        <p className="mb-3 text-sm uppercase tracking-widest text-gray-500">
+          Experience
+        </p>
+
+        <h2 className="text-3xl font-semibold">
+          Mortgage Specialist Assistant
+        </h2>
+
+        <p className="mt-2 text-gray-500">TD Bank</p>
+
+        <ul className="mt-8 max-w-3xl space-y-4 leading-7 text-gray-600 dark:text-gray-400">
+          <li>
+            • Support Mortgage Specialists throughout the mortgage application
+            process and assist with customer documentation.
+          </li>
+
+          <li>
+            • Request required documents from customers and organize and index
+            them within internal systems.
+          </li>
+
+          <li>
+            • Enter and maintain client and mortgage application information
+            within CreditLink.
+          </li>
+
+          <li>
+            • Work with mortgage application processes, documentation
+            requirements, and internal banking procedures.
+          </li>
+
+          <li>
+            • Follow compliance requirements and established procedures while
+            handling customer and financial information.
+          </li>
+        </ul>
+      </section>
+
+      {/* Skills */}
+      <section id="skills" className="mx-auto max-w-6xl px-6 py-24">
+        <p className="mb-3 text-sm uppercase tracking-widest text-gray-500">
+          Skills & Tools
+        </p>
+
+        <h2 className="text-3xl font-semibold">How I Work</h2>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="rounded-2xl border border-gray-200 p-6 dark:border-gray-800">
+            <h3 className="text-xl font-semibold">Technical Skills</h3>
+
+            <p className="mt-4 leading-7 text-gray-600 dark:text-gray-400">
+              Programming, debugging, problem solving, Git/GitHub,
+              command-line tools, APIs, databases, and software development
+              workflows.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-gray-200 p-6 dark:border-gray-800">
+            <h3 className="text-xl font-semibold">AI-Assisted Workflow</h3>
+
+            <p className="mt-4 leading-7 text-gray-600 dark:text-gray-400">
+              ChatGPT, Gemini, Claude, and Perplexity for technical research,
+              learning new concepts, comparing approaches, debugging,
+              summarizing information, and improving productivity.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
+        <p className="mb-3 text-sm uppercase tracking-widest text-gray-500">
+          Projects
+        </p>
+
+        <h2 className="text-3xl font-semibold">Featured Projects</h2>
+
+        <p className="mt-6 max-w-2xl leading-7 text-gray-600 dark:text-gray-400">
+          Projects where I apply technical concepts to practical problems.
+        </p>
+
+        {/* HomeAtlas */}
+        <div className="mt-10 rounded-2xl border border-gray-200 p-8 transition hover:border-gray-400 dark:border-gray-800 dark:hover:border-gray-600">
+          <p className="mb-3 text-sm uppercase tracking-widest text-gray-500">
+            Full-Stack Web Application
           </p>
+
+          <h3 className="text-3xl font-semibold">HomeAtlas</h3>
+
+          <p className="mt-5 max-w-3xl leading-7 text-gray-600 dark:text-gray-400">
+            A full-stack real-estate exploration platform that helps users
+            search for homes, review property details, estimate mortgage and
+            ownership costs, compare properties, and understand financial
+            considerations such as cash to close and projected equity.
+          </p>
+
+          {/* Features */}
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <div className="rounded-xl bg-gray-100 p-5 dark:bg-gray-950">
+              <p className="font-medium">Interactive Property Search</p>
+
+              <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
+                Displays property listings on an interactive Leaflet map with
+                property information and photos.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-gray-100 p-5 dark:bg-gray-950">
+              <p className="font-medium">Mortgage Analysis</p>
+
+              <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
+                Calculates mortgage-related values, monthly ownership costs,
+                cash-to-close estimates, and affordability information.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-gray-100 p-5 dark:bg-gray-950">
+              <p className="font-medium">Property Comparison</p>
+
+              <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
+                Allows users to compare two properties side by side and review
+                financial differences.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-gray-100 p-5 dark:bg-gray-950">
+              <p className="font-medium">Backend & Data</p>
+
+              <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
+                Uses a FastAPI backend with SQLite and Pandas to provide
+                property data and application functionality to the frontend.
+              </p>
+            </div>
+          </div>
+
+          {/* Tech Stack */}
+          <div className="mt-8">
+            <p className="text-sm font-medium">Tech Stack</p>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              {[
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Leaflet",
+                "Python",
+                "FastAPI",
+                "SQLite",
+                "Pandas",
+                "Render",
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full border border-gray-300 px-3 py-1 text-sm text-gray-600 dark:border-gray-800 dark:text-gray-400"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Project Links */}
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="https://homeatlas-site.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-black px-5 py-3 font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+            >
+              Live Demo ↗
+            </a>
+
+            <a
+              href="https://github.com/Quantum0uasar/homeatlas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-gray-300 px-5 py-3 font-medium transition hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-900"
+            >
+              View GitHub ↗
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="mx-auto max-w-6xl border-t border-gray-200 px-6 py-10 text-sm text-gray-500 dark:border-gray-800">
+        Computer Science Portfolio
+      </footer>
+    </main>
   );
 }
