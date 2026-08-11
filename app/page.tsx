@@ -1118,7 +1118,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/linkedin.com/in/jaideep-singh-a541882aa"
+            href="linkedin.com/in/jaideep-singh-a541882aa"
             target="_blank"
             rel="noopener noreferrer"
             className="transition hover:text-black dark:hover:text-white"
