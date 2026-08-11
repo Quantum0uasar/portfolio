@@ -5,7 +5,7 @@ export default function Home() {
     <main className="min-h-screen bg-white text-black transition-colors duration-300 dark:bg-black dark:text-white">
       {/* Navigation */}
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8">
-        <h1 className="text-xl font-semibold">Portfolio</h1>
+        <h1 className="text-xl font-semibold">Jaideep Singh</h1>
 
         <div className="flex items-center gap-6">
           <div className="hidden gap-6 text-sm text-gray-600 md:flex dark:text-gray-400">
@@ -50,36 +50,44 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="mx-auto flex min-h-[75vh] max-w-6xl flex-col justify-center px-6">
-        <p className="mb-4 text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400">
-          Computer Science Student
-        </p>
+      <section className="mx-auto flex min-h-[75vh] max-w-6xl flex-col justify-center gap-10 px-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p className="mb-4 text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400">
+            Jaideep Singh · Computer Science @ Western University
+          </p>
 
-        <h2 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
-          Building strong foundations in software, systems, and problem solving.
-        </h2>
+                    <h2 className="max-w-4xl text-5xl font-bold leading-tight md:text-6xl">
+            CS student who learns by building.
+          </h2>
 
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-400">
-          Developing my technical skills through computer science coursework,
-          hands-on projects, professional experience, and modern AI-assisted
-          workflows.
-        </p>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-400">
+            I study Computer Science at Western and build hands-on projects
+            with full-stack code and AWS.
+          </p>
 
-        <div className="mt-8 flex flex-wrap gap-4">
-          <a
-            href="#projects"
-            className="rounded-lg bg-black px-6 py-3 font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
-          >
-            View Projects
-          </a>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              className="rounded-lg bg-black px-6 py-3 font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+            >
+              View Projects
+            </a>
 
-          <a
-            href="#experience"
-            className="rounded-lg border border-gray-300 px-6 py-3 font-medium transition hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-900"
-          >
-            Experience
-          </a>
+            <a
+              href="#experience"
+              className="rounded-lg border border-gray-300 px-6 py-3 font-medium transition hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-900"
+            >
+              Experience
+            </a>
+          </div>
         </div>
+
+        {/* Profile Photo */}
+        <img
+          src="/photo.PNG"
+          alt="Jaideep Singh"
+          className="h-48 w-48 shrink-0 rounded-full border-2 border-gray-200 object-cover object-top shadow-lg md:h-64 md:w-64 dark:border-gray-800"
+        />
       </section>
 
       {/* About */}
@@ -88,13 +96,17 @@ export default function Home() {
           About
         </p>
 
-        <h2 className="text-3xl font-semibold">What I&apos;m Learning</h2>
+        <h2 className="text-3xl font-semibold">Background</h2>
 
-        <p className="mt-6 max-w-3xl leading-8 text-gray-600 dark:text-gray-400">
-          My computer science coursework has developed my understanding of
-          Data Structures & Algorithms, Computer Architecture, Software
-          Engineering, Systems Programming, Discrete Structures, Logic,
-          Statistics, and Object-Oriented Programming.
+          <p className="mt-6 max-w-3xl leading-8 text-gray-600 dark:text-gray-400">
+          I&apos;m an Honours Computer Science student at Western University
+          with a minor in Software Engineering, named to the Dean&apos;s
+          Honour List. My coursework has built skills in problem solving,
+          analytical reasoning, and software design through Data Structures
+          & Algorithms, Computer Organization & Architecture, Software
+          Engineering, Software Tools & Systems Programming, Discrete
+          Structures, Applied Logic, Statistics, and Critical Reasoning —
+          skills I apply by building and deploying real systems.
         </p>
       </section>
 
@@ -148,22 +160,23 @@ export default function Home() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <div className="rounded-2xl border border-gray-200 p-6 dark:border-gray-800">
-            <h3 className="text-xl font-semibold">Technical Skills</h3>
+            <h3 className="text-xl font-semibold">Software Development</h3>
 
             <p className="mt-4 leading-7 text-gray-600 dark:text-gray-400">
-              Programming, debugging, problem solving, Git/GitHub,
-              command-line tools, APIs, databases, and software development
-              workflows.
+              Python, FastAPI, Flask, JavaScript, Java, SQL (MySQL, SQLite),
+              REST API design, Git/GitHub, and command-line tooling — with an
+              AI-assisted workflow for research, debugging, and code review.
             </p>
           </div>
 
           <div className="rounded-2xl border border-gray-200 p-6 dark:border-gray-800">
-            <h3 className="text-xl font-semibold">AI-Assisted Workflow</h3>
+            <h3 className="text-xl font-semibold">Cloud & AWS</h3>
 
             <p className="mt-4 leading-7 text-gray-600 dark:text-gray-400">
-              ChatGPT, Gemini, Claude, and Perplexity for technical research,
-              learning new concepts, comparing approaches, debugging,
-              summarizing information, and improving productivity.
+              VPC design and private networking, EC2 with Auto Scaling and
+              load balancing, RDS MySQL, S3, CloudFront, Route 53, WAF, IAM,
+              and Systems Manager Parameter Store. Currently pursuing the AWS
+              Cloud Practitioner certification.
             </p>
           </div>
         </div>
@@ -777,8 +790,40 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="mx-auto max-w-6xl border-t border-gray-200 px-6 py-10 text-sm text-gray-500 dark:border-gray-800">
-        Computer Science Portfolio
+      <footer
+        id="contact"
+        className="mx-auto flex max-w-6xl flex-col gap-4 border-t border-gray-200 px-6 py-10 text-sm text-gray-500 md:flex-row md:items-center md:justify-between dark:border-gray-800"
+      >
+        <p className="font-medium text-black dark:text-white">
+          Jaideep Singh — Computer Science, Western University
+        </p>
+
+        <div className="flex flex-wrap gap-6">
+          <a
+            href="mailto:jaideep.s2024@gmail.com"
+            className="transition hover:text-black dark:hover:text-white"
+          >
+            Email
+          </a>
+
+          <a
+            href="https://github.com/Quantum0uasar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition hover:text-black dark:hover:text-white"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/YOUR-LINKEDIN-HERE"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition hover:text-black dark:hover:text-white"
+          >
+            LinkedIn
+          </a>
+        </div>
       </footer>
     </main>
   );
