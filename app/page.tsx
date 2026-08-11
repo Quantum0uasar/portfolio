@@ -787,6 +787,308 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        {/* AWS Project 03 */}
+        <div className="mt-10 rounded-2xl border border-gray-200 p-8 transition hover:border-gray-400 dark:border-gray-800 dark:hover:border-gray-600">
+          {/* Header */}
+          <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p className="mb-3 text-sm uppercase tracking-widest text-gray-500">
+                AWS Project 03
+              </p>
+
+              <h3 className="text-3xl font-semibold">
+                FleetPulse — Real-Time Vehicle Telemetry Platform
+              </h3>
+            </div>
+
+            <div className="w-fit rounded-full border border-gray-300 px-4 py-2 text-sm font-medium text-gray-600 dark:border-gray-700 dark:text-gray-400">
+              Deployed & Validated on AWS
+            </div>
+          </div>
+
+          <p className="mt-6 max-w-3xl leading-7 text-gray-600 dark:text-gray-400">
+            Built an event-driven vehicle telemetry platform that streams GPS,
+            speed, battery, engine temperature, and vehicle health data through
+            AWS. A Python simulator publishes telemetry to Amazon Kinesis, AWS
+            Lambda processes each event, DynamoDB stores live vehicle state and
+            alerts, S3 keeps telemetry history, and a FastAPI WebSocket backend
+            deployed on ECS Fargate feeds a live React dashboard.
+          </p>
+
+          {/* Live Dashboard */}
+          <div className="mt-10">
+            <div className="mb-4">
+              <p className="text-sm uppercase tracking-widest text-gray-500">
+                Live Operations Dashboard
+              </p>
+
+              <h4 className="mt-2 text-xl font-semibold">
+                Real-Time Fleet Monitoring
+              </h4>
+
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-gray-600 dark:text-gray-400">
+                The dashboard displays live vehicle positions, fleet speed,
+                battery health, vehicle telemetry, and automatically detected
+                anomalies. The screenshot and video below were captured while
+                the AWS pipeline was running.
+              </p>
+            </div>
+
+            <img
+              src="/projects/fleetpulse/fleetpulse-dashboard.png"
+              alt="FleetPulse live operations dashboard showing vehicle telemetry and alerts"
+              className="w-full rounded-xl border border-gray-200 object-contain dark:border-gray-800"
+            />
+
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              className="mx-auto mt-6 w-full max-w-4xl rounded-xl border border-gray-200 dark:border-gray-800"
+            >
+              <source
+                src="/projects/fleetpulse/fleetpulse-live-demo.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+
+          {/* Architecture */}
+          <div className="mt-10">
+            <p className="text-sm font-medium">Architecture</p>
+
+            <div className="mt-4 grid gap-3 md:grid-cols-3 lg:grid-cols-6">
+              {[
+                ["Simulator", "Python telemetry"],
+                ["Kinesis", "Streaming ingest"],
+                ["Lambda", "Event processing"],
+                ["DynamoDB + S3", "Live + history"],
+                ["FastAPI / ECS", "Containerized API"],
+                ["React", "Live dashboard"],
+              ].map(([name, detail]) => (
+                <div
+                  key={name}
+                  className="rounded-xl border border-gray-200 p-4 dark:border-gray-800"
+                >
+                  <p className="font-semibold">{name}</p>
+                  <p className="mt-1 text-sm text-gray-500">{detail}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-4 text-sm text-gray-500">
+              Simulator → Kinesis → Lambda → DynamoDB / S3 → FastAPI on ECS
+              Fargate → WebSocket → React
+            </p>
+          </div>
+
+          {/* Measured Results */}
+          <div className="mt-10">
+            <p className="text-sm uppercase tracking-widest text-gray-500">
+              Measured Results
+            </p>
+
+            <h4 className="mt-2 text-xl font-semibold">
+              AWS-Hosted API Test
+            </h4>
+
+            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-xl bg-gray-100 p-5 dark:bg-gray-950">
+                <p className="text-2xl font-semibold">10 / 10</p>
+                <p className="mt-1 text-sm text-gray-500">
+                  Successful requests
+                </p>
+              </div>
+
+              <div className="rounded-xl bg-gray-100 p-5 dark:bg-gray-950">
+                <p className="text-2xl font-semibold">13.52 req/s</p>
+                <p className="mt-1 text-sm text-gray-500">Throughput</p>
+              </div>
+
+              <div className="rounded-xl bg-gray-100 p-5 dark:bg-gray-950">
+                <p className="text-2xl font-semibold">640.10 ms</p>
+                <p className="mt-1 text-sm text-gray-500">Average latency</p>
+              </div>
+
+              <div className="rounded-xl bg-gray-100 p-5 dark:bg-gray-950">
+                <p className="text-2xl font-semibold">716.92 ms</p>
+                <p className="mt-1 text-sm text-gray-500">P95 latency</p>
+              </div>
+            </div>
+
+            <p className="mt-3 text-xs text-gray-500">
+              Small development concurrency test against the ECS-hosted
+              FastAPI backend; not presented as a production-scale benchmark.
+            </p>
+          </div>
+
+          {/* Alerting */}
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            <div className="rounded-xl bg-gray-100 p-5 dark:bg-gray-950">
+              <p className="font-medium">Automated Anomaly Detection</p>
+              <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
+                Lambda evaluates incoming telemetry and creates alerts for high
+                engine temperature, low battery, high speed, and vehicle fault
+                codes. A demo anomaly at 110°C was detected and surfaced in the
+                live dashboard.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-gray-100 p-5 dark:bg-gray-950">
+              <p className="font-medium">Infrastructure as Code</p>
+              <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
+                Provisioned the AWS environment with Terraform, including
+                Kinesis, Lambda, DynamoDB, S3, SQS, ECR, ECS Fargate,
+                CloudWatch, IAM roles, security groups, and an AWS Budget.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-gray-100 p-5 dark:bg-gray-950">
+              <p className="font-medium">Container Deployment</p>
+              <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
+                Containerized the FastAPI backend with Docker, pushed the image
+                to Amazon ECR, and ran it as an ARM64 ECS Fargate task with
+                CloudWatch logging and a dedicated task IAM role.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-gray-100 p-5 dark:bg-gray-950">
+              <p className="font-medium">Real-Time WebSockets</p>
+              <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
+                FastAPI streams current vehicle and alert data to the React
+                frontend over WebSockets so the map and fleet metrics update
+                without manual page refreshes.
+              </p>
+            </div>
+          </div>
+
+          {/* AWS Evidence */}
+          <div className="mt-10">
+            <p className="text-sm uppercase tracking-widest text-gray-500">
+              AWS Deployment Evidence
+            </p>
+
+            <h4 className="mt-2 text-xl font-semibold">
+              Validated Cloud Resources
+            </h4>
+
+            <div className="mt-5 grid gap-5 md:grid-cols-2">
+              <div>
+                <img
+                  src="/projects/fleetpulse/fleetpulse-ecs.png"
+                  alt="FleetPulse ECS cluster with a running Fargate task"
+                  className="rounded-xl border border-gray-200 dark:border-gray-800"
+                />
+                <p className="mt-2 text-sm text-gray-500">
+                  ECS cluster with the backend Fargate task running.
+                </p>
+              </div>
+
+              <div>
+                <img
+                  src="/projects/fleetpulse/fleetpulse-kinesis.png"
+                  alt="FleetPulse Kinesis telemetry stream active"
+                  className="rounded-xl border border-gray-200 dark:border-gray-800"
+                />
+                <p className="mt-2 text-sm text-gray-500">
+                  Active provisioned Kinesis telemetry stream.
+                </p>
+              </div>
+
+              <div>
+                <img
+                  src="/projects/fleetpulse/fleetpulse-dynamodb.png"
+                  alt="FleetPulse DynamoDB live vehicle and alert tables"
+                  className="rounded-xl border border-gray-200 dark:border-gray-800"
+                />
+                <p className="mt-2 text-sm text-gray-500">
+                  DynamoDB tables for live vehicle state and detected alerts.
+                </p>
+              </div>
+
+              <div>
+                <img
+                  src="/projects/fleetpulse/fleetpulse-ecr.png"
+                  alt="FleetPulse backend repository in Amazon ECR"
+                  className="rounded-xl border border-gray-200 dark:border-gray-800"
+                />
+                <p className="mt-2 text-sm text-gray-500">
+                  Docker backend image stored in Amazon ECR.
+                </p>
+              </div>
+            </div>
+
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              className="mx-auto mt-6 w-full max-w-4xl rounded-xl border border-gray-200 dark:border-gray-800"
+            >
+              <source
+                src="/projects/fleetpulse/fleetpulse-aws-proof.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+
+          {/* Tech Stack */}
+          <div className="mt-10">
+            <p className="text-sm font-medium">AWS Services & Technologies</p>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              {[
+                "Amazon Kinesis",
+                "AWS Lambda",
+                "DynamoDB",
+                "Amazon S3",
+                "Amazon SQS",
+                "Amazon ECR",
+                "ECS Fargate",
+                "CloudWatch",
+                "IAM",
+                "Terraform",
+                "Docker",
+                "Python",
+                "FastAPI",
+                "WebSockets",
+                "React",
+                "Vite",
+                "Leaflet",
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full border border-gray-300 px-3 py-1 text-sm text-gray-600 dark:border-gray-800 dark:text-gray-400"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* GitHub */}
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a
+              href="https://github.com/Quantum0uasar/fleetpulse"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-black px-5 py-3 font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+            >
+              View FleetPulse on GitHub ↗
+            </a>
+          </div>
+
+          {/* Cost / Status */}
+          <div className="mt-10 border-t border-gray-200 pt-6 dark:border-gray-800">
+            <p className="text-sm leading-6 text-gray-500">
+              Successfully deployed and validated end to end on AWS. After
+              recording the dashboard, deployment evidence, and performance
+              results, the temporary AWS infrastructure was destroyed with
+              Terraform to avoid unnecessary recurring costs.
+            </p>
+          </div>
+        </div>
+
       </section>
 
       {/* Footer */}
