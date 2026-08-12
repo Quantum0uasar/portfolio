@@ -57,13 +57,13 @@ export default function Home() {
           </p>
 
           <h2 className="max-w-4xl text-5xl font-bold leading-tight md:text-6xl">
-            CS student who learns by building.
+             Building full-stack applications and cloud systems.
           </h2>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-400">
-            I study Computer Science at Western and build hands-on projects
-            with full-stack code and AWS.
-          </p>
+  Computer Science student at Western University building deployed
+  software with Python, FastAPI, React, AWS, Docker, and real-time data systems.
+</p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
@@ -99,15 +99,12 @@ export default function Home() {
         <h2 className="text-3xl font-semibold">Background</h2>
 
         <p className="mt-6 max-w-3xl leading-8 text-gray-600 dark:text-gray-400">
-          I&apos;m an Honours Computer Science student at Western University
-          with a minor in Software Engineering, named to the Dean&apos;s
-          Honour List. My coursework has built skills in problem solving,
-          analytical reasoning, and software design through Data Structures
-          & Algorithms, Computer Organization & Architecture, Software
-          Engineering, Software Tools & Systems Programming, Discrete
-          Structures, Applied Logic, Statistics, and Critical Reasoning —
-          skills I apply by building and deploying real systems.
-        </p>
+  I&apos;m an Honours Computer Science student at Western University
+  with a minor in Software Engineering and a focus on full-stack
+  development and cloud systems. I learn primarily by building and
+  deploying real applications, from FastAPI web platforms to
+  event-driven AWS architectures.
+</p>
       </section>
 
       {/* Experience */}
