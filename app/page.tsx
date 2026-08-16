@@ -57,13 +57,14 @@ export default function Home() {
           </p>
 
           <h2 className="max-w-4xl text-5xl font-bold leading-tight md:text-6xl">
-             Building full-stack applications and cloud systems.
+            Building full-stack applications and cloud systems.
           </h2>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-400">
-  Computer Science student at Western University building deployed
-  software with Python, FastAPI, React, AWS, Docker, and real-time data systems.
-</p>
+            Computer Science student at Western University building deployed
+            software with Python, FastAPI, React, AWS, Docker, and real-time
+            data systems.
+          </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
@@ -99,12 +100,12 @@ export default function Home() {
         <h2 className="text-3xl font-semibold">Background</h2>
 
         <p className="mt-6 max-w-3xl leading-8 text-gray-600 dark:text-gray-400">
-  I&apos;m an Honours Computer Science student at Western University
-  with a minor in Software Engineering and a focus on full-stack
-  development and cloud systems. I learn primarily by building and
-  deploying real applications, from FastAPI web platforms to
-  event-driven AWS architectures.
-</p>
+          I&apos;m an Honours Computer Science student at Western University
+          with a minor in Software Engineering and a focus on full-stack
+          development and cloud systems. I learn primarily by building and
+          deploying real applications, from FastAPI web platforms to
+          event-driven AWS architectures.
+        </p>
       </section>
 
       {/* Experience */}
@@ -317,24 +318,17 @@ export default function Home() {
               </h3>
             </div>
 
-            {/* Live AWS Badge */}
-            <a
-              href="https://learningaws2026.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex w-fit items-center gap-2 rounded-full border border-green-300 px-4 py-2 text-sm font-medium text-green-700 transition hover:bg-green-50 dark:border-green-900 dark:text-green-400 dark:hover:bg-green-950"
-            >
-              <span className="h-2 w-2 rounded-full bg-green-500"></span>
-              Live on AWS
-            </a>
+            <div className="w-fit rounded-full border border-gray-300 px-4 py-2 text-sm font-medium text-gray-600 dark:border-gray-700 dark:text-gray-400">
+              Deployed & Validated on AWS
+            </div>
           </div>
 
           <p className="mt-6 max-w-3xl leading-7 text-gray-600 dark:text-gray-400">
             Designed and deployed a secure static website architecture on AWS.
-            The website files are stored in a private Amazon S3 bucket and
-            delivered globally through Amazon CloudFront. Route 53 manages DNS,
-            AWS Certificate Manager provides HTTPS, AWS WAF adds web-layer
-            protection, and Origin Access Control prevents direct public access
+            Website files were stored in a private Amazon S3 bucket and
+            delivered globally through Amazon CloudFront. Route 53 handled DNS,
+            AWS Certificate Manager provided HTTPS, AWS WAF added web-layer
+            protection, and Origin Access Control prevented direct public access
             to the S3 origin.
           </p>
 
@@ -376,8 +370,9 @@ export default function Home() {
               <p className="font-medium">Private S3 Origin</p>
 
               <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
-                Direct access to the S3 objects is blocked. CloudFront accesses
-                the bucket securely using Origin Access Control.
+                Direct access to the S3 objects was blocked. CloudFront
+                accessed the private bucket securely using Origin Access
+                Control.
               </p>
             </div>
 
@@ -385,8 +380,8 @@ export default function Home() {
               <p className="font-medium">Global Content Delivery</p>
 
               <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
-                CloudFront caches and delivers website content through AWS edge
-                locations.
+                CloudFront cached and delivered website content through AWS
+                edge locations.
               </p>
             </div>
 
@@ -394,8 +389,9 @@ export default function Home() {
               <p className="font-medium">Custom Domain & HTTPS</p>
 
               <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
-                learningaws2026.com is routed through Route 53 and protected
-                with a TLS certificate from AWS Certificate Manager.
+                During deployment, learningaws2026.com was routed through
+                Route 53 and protected with a TLS certificate from AWS
+                Certificate Manager.
               </p>
             </div>
 
@@ -403,8 +399,8 @@ export default function Home() {
               <p className="font-medium">Web Security</p>
 
               <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
-                AWS WAF provides protection at the web layer while the S3
-                origin remains private.
+                AWS WAF provided protection at the web layer while the S3
+                origin remained private.
               </p>
             </div>
           </div>
@@ -436,21 +432,27 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Links */}
+          {/* GitHub */}
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="https://learningaws2026.com"
+              href="https://github.com/Quantum0uasar/aws-static-website"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg bg-black px-5 py-3 font-medium text-white transition hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
             >
-              Launch AWS Project ↗
+              View Project on GitHub ↗
             </a>
           </div>
 
-          <p className="mt-4 text-xs text-gray-500">
-            Hosted directly on AWS — not Vercel.
-          </p>
+          {/* Cost / Status */}
+          <div className="mt-8 border-t border-gray-200 pt-6 dark:border-gray-800">
+            <p className="text-sm leading-6 text-gray-500">
+              Successfully deployed and validated on AWS. The live AWS
+              environment was later decommissioned to avoid ongoing cloud
+              infrastructure charges. Source code and project documentation
+              remain available on GitHub.
+            </p>
+          </div>
         </div>
 
         {/* AWS Project 02 */}
@@ -473,10 +475,11 @@ export default function Home() {
           </div>
 
           <p className="mt-6 max-w-3xl leading-7 text-gray-600 dark:text-gray-400">
-            Built and deployed a three-tier web application on AWS with a public load
-            balancer, private EC2 application servers, and a private MySQL database.
-            The project was designed across two Availability Zones and tested by
-            saving real messages from the browser into Amazon RDS.
+            Built and deployed a three-tier web application on AWS with a
+            public load balancer, private EC2 application servers, and a
+            private MySQL database. The project was designed across two
+            Availability Zones and tested by saving real messages from the
+            browser into Amazon RDS.
           </p>
 
           {/* Result */}
@@ -490,9 +493,10 @@ export default function Home() {
             </p>
 
             <p className="mt-3 max-w-3xl text-sm leading-6 text-gray-600 dark:text-gray-400">
-              A user can submit a message from the browser. The request passes through
-              the AWS load balancer to Flask running on private EC2 instances, and the
-              message is stored permanently in the RDS MySQL database.
+              A user can submit a message from the browser. The request passes
+              through the AWS load balancer to Flask running on private EC2
+              instances, and the message is stored permanently in the RDS
+              MySQL database.
             </p>
           </div>
 
@@ -508,9 +512,9 @@ export default function Home() {
               </h4>
 
               <p className="mt-2 max-w-3xl text-sm leading-6 text-gray-600 dark:text-gray-400">
-                Recorded while the complete AWS environment was running. The demo
-                shows a message being sent through the application and stored
-                successfully in the database.
+                Recorded while the complete AWS environment was running. The
+                demo shows a message being sent through the application and
+                stored successfully in the database.
               </p>
             </div>
 
@@ -547,13 +551,13 @@ export default function Home() {
             <div className="mt-4 grid gap-3 md:grid-cols-4">
               <div className="rounded-xl border border-gray-200 p-5 dark:border-gray-800">
                 <p className="font-semibold">Internet</p>
-                <p className="mt-1 text-sm text-gray-500">
-                  User request
-                </p>
+                <p className="mt-1 text-sm text-gray-500">User request</p>
               </div>
 
               <div className="rounded-xl border border-gray-200 p-5 dark:border-gray-800">
-                <p className="font-semibold">Application Load Balancer</p>
+                <p className="font-semibold">
+                  Application Load Balancer
+                </p>
                 <p className="mt-1 text-sm text-gray-500">
                   Public entry point
                 </p>
@@ -586,9 +590,9 @@ export default function Home() {
             </h4>
 
             <p className="mt-3 max-w-3xl text-sm leading-6 text-gray-600 dark:text-gray-400">
-              I created six subnets across two Availability Zones: two public subnets
-              for the load balancer, two private subnets for the application servers,
-              and two private database subnets for RDS.
+              I created six subnets across two Availability Zones: two public
+              subnets for the load balancer, two private subnets for the
+              application servers, and two private database subnets for RDS.
             </p>
 
             <video
@@ -610,8 +614,8 @@ export default function Home() {
               <p className="font-medium">High Availability</p>
 
               <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
-                Ran application servers across two Availability Zones and placed them
-                behind an Application Load Balancer.
+                Ran application servers across two Availability Zones and
+                placed them behind an Application Load Balancer.
               </p>
             </div>
 
@@ -619,8 +623,9 @@ export default function Home() {
               <p className="font-medium">Automatic Recovery</p>
 
               <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
-                Terminated application instances during testing and verified that the
-                Auto Scaling Group automatically launched replacement servers.
+                Terminated application instances during testing and verified
+                that the Auto Scaling Group automatically launched replacement
+                servers.
               </p>
             </div>
 
@@ -628,8 +633,8 @@ export default function Home() {
               <p className="font-medium">Private Database</p>
 
               <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
-                Amazon RDS MySQL stayed inside private database subnets and accepted
-                database traffic only from the application tier.
+                Amazon RDS MySQL stayed inside private database subnets and
+                accepted database traffic only from the application tier.
               </p>
             </div>
 
@@ -637,8 +642,9 @@ export default function Home() {
               <p className="font-medium">Secure Credentials</p>
 
               <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-500">
-                Stored the database password as a SecureString in Systems Manager
-                Parameter Store instead of putting it directly inside the application.
+                Stored the database password as a SecureString in Systems
+                Manager Parameter Store instead of putting it directly inside
+                the application.
               </p>
             </div>
           </div>
@@ -680,7 +686,8 @@ export default function Home() {
                 />
 
                 <p className="mt-2 text-sm text-gray-500">
-                  HTTP traffic forwarded from the ALB to the application target group.
+                  HTTP traffic forwarded from the ALB to the application target
+                  group.
                 </p>
               </div>
 
@@ -709,10 +716,11 @@ export default function Home() {
             </h4>
 
             <p className="mt-4 max-w-3xl leading-7 text-gray-600 dark:text-gray-400">
-              This type of architecture can support customer portals, booking systems,
-              dashboards, internal business applications, e-commerce services, and
-              small SaaS platforms where the web entry point can be public while the
-              application servers and database stay private.
+              This type of architecture can support customer portals, booking
+              systems, dashboards, internal business applications, e-commerce
+              services, and small SaaS platforms where the web entry point can
+              be public while the application servers and database stay
+              private.
             </p>
           </div>
 
@@ -730,12 +738,17 @@ export default function Home() {
               <p>• Designed a custom AWS VPC and subnet structure.</p>
               <p>• Deployed EC2 instances inside private subnets.</p>
               <p>• Configured an Application Load Balancer and target group.</p>
-              <p>• Built an Auto Scaling deployment using an AMI and Launch Template.</p>
+              <p>
+                • Built an Auto Scaling deployment using an AMI and Launch
+                Template.
+              </p>
               <p>• Connected a Flask application to Amazon RDS MySQL.</p>
               <p>• Restricted communication using Security Groups.</p>
               <p>• Used IAM roles and Systems Manager Parameter Store.</p>
               <p>• Tested instance failure and automatic replacement.</p>
-              <p>• Diagnosed and fixed a real database authentication problem.</p>
+              <p>
+                • Diagnosed and fixed a real database authentication problem.
+              </p>
               <p>• Verified the entire application from browser to database.</p>
             </div>
           </div>
@@ -1085,7 +1098,6 @@ export default function Home() {
             </p>
           </div>
         </div>
-
       </section>
 
       {/* Footer */}
